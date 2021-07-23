@@ -1,0 +1,6 @@
+__pycache__/
+venv/
+database.db
+README.md
+.dockerignore
+Dockerfile

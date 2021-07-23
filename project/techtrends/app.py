@@ -1,5 +1,6 @@
 import logging
 import sqlite3
+from sqlite3.dbapi2 import OperationalError
 
 from flask import (Flask, flash, jsonify, redirect, render_template, request,
                    url_for)
@@ -37,6 +38,14 @@ app.config['SECRET_KEY'] = 'your secret key'
 
 @app.route('/healthz')
 def health_check():
+    connection = get_db_connection()
+    try:
+        post_count = connection.execute(
+            'SELECT count(*) as post_count FROM posts').fetchone()['post_count']
+    except OperationalError:
+        return jsonify(
+            {"result": "ERROR - unhealthy"}
+        ), 500
     return jsonify(
         {"result": "OK - healthy"}
     ), 200
@@ -118,4 +127,4 @@ if __name__ == "__main__":
     log_format = '%(levelname)s:%(name)s:%(asctime)s, %(message)s'
     date_format = '%d/%m/%y, %I:%M:%S'
     logging.basicConfig(format=log_format, datefmt=date_format)
-    app.run(host='0.0.0.0', port='3111')
+    app.run(host='0.0.0.0', port='3111', debug=True)
