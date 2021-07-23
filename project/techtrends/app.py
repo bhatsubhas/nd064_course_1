@@ -118,4 +118,4 @@ if __name__ == "__main__":
     log_format = '%(levelname)s:%(name)s:%(asctime)s, %(message)s'
     date_format = '%d/%m/%y, %I:%M:%S'
     logging.basicConfig(format=log_format, datefmt=date_format)
-    app.run(host='0.0.0.0', port='3111', debug=True)
+    app.run(host='0.0.0.0', port='3111')
