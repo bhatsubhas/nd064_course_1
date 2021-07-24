@@ -28,9 +28,9 @@ jobs:
         with:
           context: ./project
           file: ./Dockerfile
-          platform: linux/amd64
+          platforms: linux/amd64
           push: true
-          tag: bhatsubhas/techtrends:latest
+          tags: bhatsubhas/techtrends:latest
 
       - name: Image Digest
         run: echo ${{ steps.docker_build.outputs.digest }}
