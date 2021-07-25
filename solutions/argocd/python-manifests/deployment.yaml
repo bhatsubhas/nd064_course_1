@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: python-helloworld
-  name: python-helloworld
+    app: go-helloworld
+  name: go-helloworld
   namespace: default 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: python-helloworld
+      app: go-helloworld
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: python-helloworld
+        app: go-helloworld
     spec:
       containers:
       - image: bhatsubhas/go-helloworld:v1.0.0 
         imagePullPolicy: IfNotPresent
-        name: python-helloworld
+        name: go-helloworld
         resources:
           requests:
             cpu: 50m
