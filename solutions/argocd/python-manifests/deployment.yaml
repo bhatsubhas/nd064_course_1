@@ -21,7 +21,7 @@ spec:
         app: go-helloworld
     spec:
       containers:
-      - image: bhatsubhas/go-helloworld:v1.0.0 
+      - image: bhatsubhas/go-helloworld:v2.0.0 
         imagePullPolicy: IfNotPresent
         name: go-helloworld
         resources:
