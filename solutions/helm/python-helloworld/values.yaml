@@ -2,7 +2,7 @@ namespace:
   name: test
  
 image:
-  repository: bhatsubhas/python-helloworld 
+  repository: bhatsubhas/go-helloworld 
   tag: v1.0.0
 
 replicaCount: 3
