@@ -11,5 +11,5 @@ image:
 resource:
     cpu: 70m
 
-cofigmap:
+configmap:
     version: "version:1.18.0"

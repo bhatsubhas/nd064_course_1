@@ -8,5 +8,5 @@ image:
     name: nginx
     tag: 1.18.0
 
-cofigmap:
+configmap:
     version: "version:1.18.0"
