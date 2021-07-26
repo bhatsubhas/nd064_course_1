@@ -1,0 +1,9 @@
+apiVersion: v1
+name: nginx-deployment
+version: 1.0.0
+description: Install a nginx proxy server
+keywords:
+    - nginx
+maintainers:
+    - name: sbhat
+      email: sbhat@xyz.com

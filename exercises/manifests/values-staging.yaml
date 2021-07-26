@@ -1,0 +1,12 @@
+namespace:
+    name: staging
+
+replica:
+    count: 1
+
+image:
+    name: nginx
+    tag: 1.18.0
+
+cofigmap:
+    version: "version:1.18.0"

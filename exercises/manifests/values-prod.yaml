@@ -1,0 +1,15 @@
+namespace:
+    name: prod
+
+replica:
+    count: 2
+
+image:
+    name: nginx
+    tag: 1.17.0
+
+resource:
+    cpu: 70m
+
+cofigmap:
+    version: "version:1.18.0"
