@@ -1,0 +1,8 @@
+apiVesrsion: v1
+name: techtrends
+version: 1.0.0
+keywords:
+    - techtrends
+maintainers:
+    - name: sbhat
+      email: sbhat@xyz.com
