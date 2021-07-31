@@ -22,4 +22,3 @@ service:
     protocol: TCP
     type: ClusterIP
     port: 4111
-    targetPort: 3111
