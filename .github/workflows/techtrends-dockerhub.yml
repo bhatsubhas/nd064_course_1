@@ -17,7 +17,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: bhatsubhas/techtrends
-          flavors: latest=auto
+          flavor: latest=auto
           tags: |
             type=ref, event=branch
             type=semver, pattern={{version}}
